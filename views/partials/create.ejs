@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<body>
+    <%- include("header.ejs") %>
+
+    <div class="overview">
+    
+    <h2>Create your post:</h2>
+
+    <form action="/submit" method="POST">
+
+        <div class="formtitle">
+            <label for="title">Title</label>
+            <input type="text" name="title" placeholder="Type something" required>
+        </div>
+
+        <div class="formcontent">
+            <label for="content">Write something</label>
+            <textarea type="text" name="content" placeholder="So this one time, at bandcamp..." required></textarea>
+        </div>
+
+        <div>
+        <input id="submit" type="submit" value="Submit">
+        </div>
+
+    </form>
+
+    <div class="cancel"><a href="/"><< Cancel</a></div>
+
+    </div>
+    
+</body>
+</html>

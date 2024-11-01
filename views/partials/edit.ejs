@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<body>
+    <%- include("header.ejs") %>
+
+    <div class="overview">
+    
+    <h2>Edit your post:</h2>
+
+    <% if(blog.date) { %>
+        <div class="date">
+            <p>created on: <%= blog.date %></p>
+        </div>
+        <% }; %>
+
+    <form action="/edit/<%= blog.id %>?_method=PUT" method="POST">
+
+        <div class="formtitle">
+            <label for="title">Title</label>
+            <input type="text" name="title" value="<%= blog.title %>" required>
+        </div>
+
+        <div class="formcontent">
+            <label for="content">Write something</label>
+            <textarea type="text" name="content" required><%= blog.content %></textarea>
+        </div>
+
+        <div>
+        <input id="submit" type="submit" value="Update post">
+        </div>
+
+    </form>
+
+    <div class="cancel"><a href="/"><< Cancel</a></div>
+    
+    </div>
+    
+</body>
+</html>
