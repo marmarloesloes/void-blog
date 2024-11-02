@@ -42,7 +42,6 @@ body {
 
 a {
     text-decoration: none;
-    color: pink;
 }
 
 .overview {
@@ -56,6 +55,10 @@ a {
 h2 {
     margin-bottom: 10px;
     color: hotpink;
+}
+
+.headerbutton h2 {
+    color:rgb(6, 255, 6);
 }
 
 .overview p {
